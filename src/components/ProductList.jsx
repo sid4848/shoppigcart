@@ -51,7 +51,7 @@ const ProductList = () => {
             </div>
           ))}
         </div>
-        <div className="sp_header-detail">
+        <div className="sp_header-detail ">
           <div>
             <div className="sp_header-blog_detail">
               <div className="sp_header-blog_marked">
