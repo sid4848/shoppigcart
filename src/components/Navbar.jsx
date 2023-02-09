@@ -1,58 +1,38 @@
 import React from "react";
-import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
-import Typography from "@material-ui/core/Typography";
-import Button from "@material-ui/core/Button";
-import IconButton from "@material-ui/core/IconButton";
-import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
-import { makeStyles } from "@material-ui/core/styles";
-
-const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-  },
-  menuButton: {
-    marginRight: theme.spacing(2),
-  },
-  title: {
-    flexGrow: 1,
-  },
-  logo: {
-    width: "50px",
-    height: "50px",
-    marginRight: "10px",
-  },
-}));
+import SearchIcon from "@mui/icons-material/Search"; //search
+import NotificationsActiveOutlinedIcon from "@mui/icons-material/NotificationsActiveOutlined";
+import MarkUnreadChatAltOutlinedIcon from "@mui/icons-material/MarkUnreadChatAltOutlined";
+import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined"; // profile
+import { IconButton } from "@mui/material";
+import Earth from "../img/earth.svg";
+import "../css/navbar.css";
 
 export default function Navbar() {
-  const classes = useStyles();
-
   return (
-    <div className={classes.root}>
-      <AppBar position="static">
-        <Toolbar>
-          <IconButton
-            edge="start"
-            className={classes.menuButton}
-            color="inherit"
-            aria-label="menu"
-          >
-            <img
-              className={classes.logo}
-              src="https://via.placeholder.com/50x50"
-              alt="Logo"
-            />
-          </IconButton>
-          <Typography variant="h6" className={classes.title}>
-            Shop
-          </Typography>
-          <Button color="inherit">Sign Up</Button>
-          <Button color="inherit">Sign In</Button>
-          <IconButton color="inherit">
-            <ShoppingCartIcon />
-          </IconButton>
-        </Toolbar>
-      </AppBar>
+    <div className="sp_navbar">
+      <div className="sp_navbar-header">
+        <img src={Earth} alt="logo" />
+        <h2> Earthly </h2>
+      </div>
+      <div className="sp_searchBar">
+        <input className="sp_search" placeholder="Search.."></input>
+        <IconButton style={{ color: "white", background: "black" }}>
+          <SearchIcon />
+        </IconButton>
+      </div>
+      <div className="sp_navbar-icons">
+        <IconButton style={{ color: "#e7e0e0" }}>
+          <NotificationsActiveOutlinedIcon />
+        </IconButton>
+        <IconButton style={{ color: "#e7e0e0", marginRight: "1rem" }}>
+          <MarkUnreadChatAltOutlinedIcon />
+        </IconButton>
+        <button className="sp_navbar-btn Button">Sign in</button>
+        <button className="sp_navbar-btn Button">Sign up</button>
+        <IconButton style={{ color: "#e7e0e0" }}>
+          <AccountCircleOutlinedIcon />
+        </IconButton>
+      </div>
     </div>
   );
 }

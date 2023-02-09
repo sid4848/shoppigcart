@@ -1,0 +1,78 @@
+.sp_navbar {
+    background:var(--color-sidebar);
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sp_navbar img {
+    width: 40px;
+    height: 40px;
+    fill: "white";
+    margin-right: 1rem;
+}
+
+.sp_navbar-header {
+    display: flex;
+    align-items: center;
+}
+
+.sp_navbar h2 {
+    color: var(--color-text);
+    font-family: var(--font-family);
+    cursor: pointer;
+}
+
+.sp_searchBar {
+    background: var(--color-text);
+    border: 1px #fff;
+    padding-left:2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+    border: 2px var(--color-subtext) solid;
+    width: 24%;
+
+}
+
+.sp_search {
+    background:var(--color-text);
+    color: var(--color-sidebar);
+    font-size: 1rem;
+    font-weight: 500;
+    font-family: var(--font-family);
+    border: none ;
+    outline: none;
+    opacity: 0.7;
+}
+
+.sp_navbar-icons {
+    display: flex;
+    align-items: center;
+    justify-content:space-between ;
+}
+
+
+.Button,
+.sp_navbar-btn {
+    outline: none;
+    border: none;
+    padding: 0.8rem 1rem;
+    color: var(--color-text);
+    background: var(--color-bg);
+    border-radius: 10px;
+    cursor: pointer;
+    margin-right: 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.2s ease-in;
+    border: 3px var(--color-blog) solid;
+}
+
+.sp_navbar-btn:hover {
+    background: var(--color-text);
+    color: var(--color-bg);
+}
+

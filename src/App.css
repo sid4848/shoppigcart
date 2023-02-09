@@ -1,4 +1,15 @@
-
-.App {
-    background-color: #2D2E2C;
-}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+   }
+  
+   body {
+    background: var(--color-text);
+   }
+  
+   a {
+    color: unset;
+    text-decoration: none;
+   }
